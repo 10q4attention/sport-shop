@@ -5,7 +5,7 @@ const models = require('./models/models')
 const cors = require('cors') //для запросов из браузера
 const router = require('./routes/index')
 
-const PORT = process.env.PORT || 5001
+const PORT = process.env.PORT || 5002
 
 const app = express()
 app.use(cors())
