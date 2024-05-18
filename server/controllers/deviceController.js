@@ -2,6 +2,7 @@ const uuid = require('uuid')
 const path = require('path')
 const {Device} = require('../models/models')
 const ApiError = require('../error/ApiError')
+const { type } = require('os')
 
 class DeviceController {
     async create(req, res, next) {
@@ -22,12 +23,25 @@ class DeviceController {
     }
 
     async getAll(req, res) {
-        
+        const {brandId, typeId} = req.query
+        let devices;
+        if (!brandId && !typeId) {
+            devices = await Device.findAll()
+        }
+        if(brandId && !typeId){
+            devices = await Device.findAll({where:{brandId}})
+        }
+        if(!brandId && typeId){
+            devices = await Device.findAll({where:{typeId}})
+        }
+        if(brandId && typeId){
+            devices = await Device.findAll({where:{brandId}, typeId})
+        }
+        return res.json(devices)
     }
 
     async getOne(req, res) {
         
     }
 }
-
 module.exports = new DeviceController()
