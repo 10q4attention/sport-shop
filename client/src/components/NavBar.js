@@ -9,9 +9,13 @@ import logo from '../assets/logo.jpg';
 
 const NavBar = () => {
     const {user} = useContext(Context)
+    const handleLoginClick = (event) => {
+        event.preventDefault(); 
+        user.setIsAuth(true); 
+    };
 
     return (
-
+        
         
         <div id="navbar">
             <a href="#"><img src={logo} className="logo" alt="Logo" /></a>
@@ -23,7 +27,7 @@ const NavBar = () => {
                         <li><a href="logout.html">Войти</a></li>
                     </>
                 ) : (
-                    <li><a href="login.html">Авторизация</a></li>
+                    <li><a href="login.html" onClick={handleLoginClick}>Авторизация</a></li>
                 )}
             </ul>
 
@@ -41,10 +45,6 @@ const NavBar = () => {
                 <i id="bar" class="fa-solid fa-bars"></i>
             </div> */}
         </div>
-
-
-
-      
     )
 }
 
@@ -52,6 +52,6 @@ const NavBar = () => {
 
 
 export default observer(NavBar);
- 
+//export default (NavBar);
 
 

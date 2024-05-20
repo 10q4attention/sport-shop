@@ -19,7 +19,7 @@
 // )
 
 import React, { createContext } from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
 import App from './App';
 import UserStore from './store/UserStore';
 import DeviceStore from './store/DeviceStore';
