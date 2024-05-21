@@ -9,7 +9,7 @@ import BrandBar from "../components/BrandBar";
 const Shop = () => {
     return (
         <Container>
-            <Row className="mt-2">
+            <Row className="mt-2 shop-row">
                 <Col md={3}>
                     <TypeBar/>
                 </Col>

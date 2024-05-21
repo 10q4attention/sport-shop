@@ -8,16 +8,16 @@ import Card from "react-bootstrap/Card"
 const BrandBar = observer(() => {
     const {device} = useContext(Context)
     return ( 
-        <Row className="d-flex">
+        <div className="brandbad-row">
             {device.brands.map(brand =>
-                <Card
+                <Card 
                     key={brand.id}
                     className="p-3"
                 >
                     {brand.name}
                 </Card>
             )}
-        </Row>
+        </div>
     );
 });
  

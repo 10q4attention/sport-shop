@@ -72,22 +72,6 @@ html, body {
     width: 16%;
   }
 
-  /* #auth-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: calc(100vh - 70px);
-  }
-
-  #auth-card {
-    width: 600px;
-    padding: 5px;
-    border: 1px sold black;
-  }
-
-  #auth-name {
-    margin-left: auto;
-  } */
 
   
 
@@ -95,7 +79,7 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: calc(100vh - 54px); /* высота окна минус 54 пикселя */
+    height: calc(100vh - 54px); 
 }
 
 .auth-card {
@@ -153,4 +137,14 @@ html, body {
 .typebar-active-type {
   color: #000;
   background-color: #465b52;;
+}
+
+.brandbad-row {
+  display: flex;
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+.shop-row>* {
+  padding-left: 0 !important;
 }
