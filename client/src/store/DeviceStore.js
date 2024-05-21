@@ -18,6 +18,7 @@ export default class DeviceStore {
             {id: 1, name: 'notepro', price: 1000, rating: 5, img: 'https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSYWRcjtoYzJ7BuseTU81ERw2eUk2e1IC3p7jWmDaDEREu9AOkc82eIB27GqoCRRSX5I1LvnLUYHLuJiGcmQmAKc-sIu15dVb55dcS2k_iN&usqp=CAE'},
         ]
         this._selectedType = {}
+        this._selectedBrand = {}
         makeAutoObservable(this)
     }
 
@@ -35,6 +36,10 @@ export default class DeviceStore {
         this._selectedType = type
     }
 
+    setSelectedBrand(brand) {
+        this._selectedBrand = brand
+    }
+
     get types() { //вызывается только, если переменная внутри была изменен
         return this._types
     }
@@ -46,5 +51,8 @@ export default class DeviceStore {
     }
     get selectedType() {
         return this._selectedType
+    }
+    get selectedBrand() {
+        return this._selectedBrand
     }
 }

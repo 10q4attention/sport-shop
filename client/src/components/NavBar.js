@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { Context } from "../index.js";
 import { observer } from 'mobx-react-lite';
 import { useNavigate } from 'react-router-dom';
-import { LOGIN_ROUTE, SHOP_ROUTE } from '../utils/consts';
+import { LOGIN_ROUTE, SHOP_ROUTE, MAIN_ROUTE} from '../utils/consts';
 import logo from '../assets/logo.jpg';
 
 
@@ -19,7 +19,7 @@ const NavBar = () => {
     };
 
     const clickToMainPage = () => {
-        navigate(SHOP_ROUTE);
+        navigate(MAIN_ROUTE);
     }
 
     return (
