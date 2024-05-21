@@ -1,6 +1,8 @@
 import React, { useContext } from 'react';
 import { Context } from "../index.js";
 import { observer } from 'mobx-react-lite';
+import { useNavigate } from 'react-router-dom';
+import { LOGIN_ROUTE, SHOP_ROUTE } from '../utils/consts';
 import logo from '../assets/logo.jpg';
 
 
@@ -9,16 +11,22 @@ import logo from '../assets/logo.jpg';
 
 const NavBar = () => {
     const {user} = useContext(Context)
+    const navigate = useNavigate();
     const handleLoginClick = (event) => {
         event.preventDefault(); 
         user.setIsAuth(true); 
+        navigate(LOGIN_ROUTE);
     };
+
+    const clickToMainPage = () => {
+        navigate(SHOP_ROUTE);
+    }
 
     return (
         
         
         <div id="navbar">
-            <a href="#"><img src={logo} className="logo" alt="Logo" /></a>
+            <a href="#" onClick={clickToMainPage}><img src={logo} className="logo" alt="Logo" /></a>
 
             <ul id="navbar-right-section">
                 {user.isAuth ? (
@@ -27,7 +35,7 @@ const NavBar = () => {
                         <li><a href="logout.html">Войти</a></li>
                     </>
                 ) : (
-                    <li><a href="login.html" onClick={handleLoginClick}>Авторизация</a></li>
+                    <li><a href="#" onClick={handleLoginClick}>Авторизация</a></li>
                 )}
             </ul>
 

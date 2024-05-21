@@ -148,3 +148,9 @@ html, body {
     background-color: #28a745;
     color: #fff;
 }
+
+
+.typebar-active-type {
+  color: #000;
+  background-color: #465b52;;
+}

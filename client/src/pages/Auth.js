@@ -16,7 +16,21 @@ const Auth = observer(() => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
-
+    // const click = async () => {
+    //     try {
+    //         let data;
+    //         if (isLogin) {
+    //             data = await login(email, password);
+    //         } else {
+    //             data = await registration(email, password);
+    //         }
+    //         user.setUser(user);
+    //         user.setIsAuth(true);
+    //         navigate(SHOP_ROUTE);
+    //     } catch (e) {
+    //         alert(e.response.data.message);
+    //     }
+    // };
 
     return (
         <div className="auth-container">
