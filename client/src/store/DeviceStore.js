@@ -11,6 +11,9 @@ export default class DeviceStore {
         this._brands = [
             {id: 1, name: 'LG'},
             {id: 2, name: 'Apple'},
+            {id: 3, name: 'Lenovo'},
+            {id: 4, name: 'Asus'},
+            
         ]
         this._devices = [
             {id: 1, name: '12 pro', price: 1000, rating: 5, img: 'https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSYWRcjtoYzJ7BuseTU81ERw2eUk2e1IC3p7jWmDaDEREu9AOkc82eIB27GqoCRRSX5I1LvnLUYHLuJiGcmQmAKc-sIu15dVb55dcS2k_iN&usqp=CAE'},

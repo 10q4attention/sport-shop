@@ -141,10 +141,30 @@ html, body {
 
 .brandbad-row {
   display: flex;
+  flex-wrap: wrap;
   width: 100% !important;
   max-width: 100% !important;
 }
 
 .shop-row>* {
   padding-left: 0 !important;
+}
+
+.brandbar-card {
+  padding: 10px 20px;
+
+}
+
+.devicelist-row {
+  display: flex;
+}
+
+.bottom-itemcard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.item-rating {
+  display: flex;
 }
